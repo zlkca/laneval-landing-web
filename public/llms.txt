@@ -43,4 +43,4 @@ LaneVal starts with the data brokers already own — historical quotes, booked c
 
 ## Pages
 
-- [Home](https://laneval.pages.dev/): full landing page with product details, workflow, ICP, and FAQ.
+- [Home](https://laneval.com/): full landing page with product details, workflow, ICP, and FAQ.

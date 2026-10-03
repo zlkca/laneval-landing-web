@@ -70,6 +70,11 @@ web_modules/
 .env.*
 !.env.example
 
+# Cloudflare Workers / Wrangler
+.wrangler/
+.dev.vars
+worker-configuration.d.ts
+
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache

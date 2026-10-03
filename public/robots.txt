@@ -14,4 +14,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://laneval.pages.dev/sitemap.xml
+Sitemap: https://laneval.com/sitemap.xml
