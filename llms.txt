@@ -1,0 +1,46 @@
+# LaneVal
+
+> LaneVal is a margin assistant for independent truckload freight brokers. It helps brokers avoid bad quotes and protect margin on every spot and contract load by surfacing the real carrier buy-rate risk and the expected spread before a price is sent.
+
+## What LaneVal does
+
+LaneVal reads an incoming customer RFQ (email), extracts the lane, equipment, volume, frequency, and customer, and returns a quote recommendation containing:
+
+- Customer sell price
+- Expected carrier buy range
+- Expected margin range
+- Risk level (Low / Medium / High) with the reasons behind it
+
+LaneVal does **not** claim to predict freight rates. Its positioning is: "Avoid bad quotes and protect margin."
+
+## Who it is for (ICP)
+
+- Independent, asset-light truckload freight brokerages
+- 5–100 employees
+- 10–500 loads per month
+- Run a TMS plus DAT/Truckstop plus spreadsheets
+- Have salespeople quoting customers and operations people covering loads
+- Examples: regional brokerage, produce broker, dry van broker, reefer broker, flatbed broker
+
+## Why truckload first
+
+Truckload brokerage has the most visible pain: highly variable carrier costs, constant spot quoting, and margin pressure. Load board (DAT/Truckstop) averages do not always match the capacity actually available on a lane, so brokers often rely on carrier relationships, lane knowledge, and gut feel.
+
+## How the workflow works (MVP)
+
+1. **Extract** — paste the RFQ; LaneVal extracts lane, equipment, volume, frequency, and customer.
+2. **Ground the price** — choose a pricing basis (existing carrier history, DAT/Truckstop rate, or manual estimate).
+3. **Recommend & protect** — get sell price, expected carrier buy range, expected margin range, and risk with reasons.
+
+## What you need to get started
+
+LaneVal starts with the data brokers already own — historical quotes, booked carrier rates, failed quotes, and margin history — and layers in market context like DAT and Truckstop rates, fuel, weather, and seasonality to sharpen each recommendation.
+
+## Key facts
+
+- Founded to serve independent truckload brokers — dry van, reefer, flatbed, and produce.
+- Early access now open; contact hello@laneval.io.
+
+## Pages
+
+- [Home](https://laneval.pages.dev/): full landing page with product details, workflow, ICP, and FAQ.

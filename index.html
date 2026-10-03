@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>LaneVal — Margin Assistant for Truckload Freight Brokers</title>
+  <meta name="description" content="LaneVal helps independent truckload freight brokers quote with confidence — see real carrier buy-rate risk and protect your margin on every spot and contract load. Built for brokers moving 10–500 loads per month." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <link rel="canonical" href="https://laneval.pages.dev/" />
+
+  <!-- GEO: explicit product + category statement for AI engines -->
+  <meta name="keywords" content="freight broker software, truckload quoting software, freight margin assistant, carrier rate, buy rate, sell rate, spot freight quote, contract freight quote, load board, DAT, Truckstop, TMS, dry van, reefer, flatbed" />
+  <meta name="author" content="LaneVal" />
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LaneVal" />
+  <meta property="og:title" content="LaneVal — Margin Assistant for Truckload Freight Brokers" />
+  <meta property="og:description" content="Quote truckload freight with confidence. LaneVal turns your quoting history into a live margin guardrail — see the real buy-side risk and the spread you keep, before you send the price." />
+  <meta property="og:url" content="https://laneval.pages.dev/" />
+  <meta property="og:image" content="https://laneval.pages.dev/assets/og-image.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LaneVal — Margin Assistant for Truckload Freight Brokers" />
+  <meta name="twitter:description" content="Quote truckload freight with confidence. See real carrier buy-rate risk and protect your margin on every load." />
+  <meta name="twitter:image" content="https://laneval.pages.dev/assets/og-image.svg" />
+
+  <!-- Icons -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <!-- Structured data: Organization, WebSite, SoftwareApplication, FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://laneval.pages.dev/#org",
+        "name": "LaneVal",
+        "url": "https://laneval.pages.dev/",
+        "logo": "https://laneval.pages.dev/assets/favicon.svg",
+        "description": "Margin assistant for truckload freight brokers that flags bad quotes and protects margin on every load.",
+        "sameAs": []
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://laneval.pages.dev/#website",
+        "url": "https://laneval.pages.dev/",
+        "name": "LaneVal",
+        "publisher": { "@id": "https://laneval.pages.dev/#org" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "LaneVal",
+        "operatingSystem": "Web",
+        "applicationCategory": "BusinessApplication",
+        "url": "https://laneval.pages.dev/",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Early-access pricing" },
+        "description": "Margin assistant for independent truckload freight brokers. Extracts lanes, equipment, and volume from RFQs and recommends a sell price, expected carrier buy range, margin, and risk level.",
+        "about": {
+          "@type": "Thing",
+          "name": "Truckload freight brokerage quoting"
+        },
+        "audience": {
+          "@type": "BusinessAudience",
+          "name": "Independent truckload freight brokers",
+          "description": "Asset-light brokerages with 5–100 employees moving 10–500 loads per month."
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What does LaneVal do?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "LaneVal is a margin assistant for truckload freight brokers. It reads an incoming RFQ, extracts the lane, equipment, and volume, and recommends a customer sell price, an expected carrier buy range, an expected margin, and a risk level with reasons — so brokers can avoid bad quotes and protect margin."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does LaneVal predict freight rates?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. LaneVal does not claim to predict freight rates. It helps brokers avoid bad quotes and protect margin by surfacing the buy-side risk and expected spread before a price is sent, grounded in the broker's own quoting and booked-carrier history."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What data do I need to get started?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Start with the data you already own: historical quotes, booked carrier rates, failed quotes, and margin history — your own loads with origin, destination, equipment, customer rate, carrier cost, margin, carrier, and date. No large external dataset is required to begin."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does LaneVal integrate with my TMS, DAT, or Truckstop?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "LaneVal reads your historical loads and ingests TMS exports to get you started, then layers in DAT and Truckstop rate context, fuel prices, weather, and seasonality to sharpen the buy-side range."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is LaneVal different from load board rate averages?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Load board averages do not always match the capacity actually available on a lane. LaneVal layers your own booked-carrier rates and margin history on top, so the recommendation reflects what you actually pay and win, not a national average."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What freight modes does LaneVal support today?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "LaneVal supports truckload today — dry van, reefer, flatbed, and produce."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a href="/" class="brand" aria-label="LaneVal home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="28" height="28" rx="8" fill="url(#lg)"/>
+            <path d="M9 20.5V12l5 5 4-4 5 5" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="23" cy="21" r="2.2" fill="#fff"/>
+            <defs><linearGradient id="lg" x1="2" y1="2" x2="30" y2="30"><stop stop-color="#4F46E5"/><stop offset="1" stop-color="#06B6D4"/></linearGradient></defs>
+          </svg>
+        </span>
+        <span class="brand-name">LaneVal</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#problem">Problem</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#who-its-for">Who it's for</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-primary" href="#early-access">Request early access</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" data-mobile-nav hidden>
+      <a href="#problem">Problem</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#who-its-for">Who it's for</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-primary" href="#early-access">Request early access</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Margin assistant for truckload freight brokers</p>
+          <h1>Quote truckload freight with <span class="grad">confidence</span> — protect your margin on every load.</h1>
+          <p class="lede">LaneVal turns your quoting history into a live margin guardrail. Before you send a price, see the real carrier buy-rate risk and the spread you'll keep — so you stop leaving margin on the table and stop taking loads that lose money.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary btn-lg" href="#early-access">Request early access</a>
+            <a class="btn btn-ghost btn-lg" href="#how-it-works">See how it works</a>
+          </div>
+          <ul class="hero-proof" aria-label="Who LaneVal is for">
+            <li>Built for independent truckload brokers</li>
+            <li>10–500 loads / month</li>
+            <li>Dry van · Reefer · Flatbed · Produce</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-label="Sample LaneVal quote recommendation">
+          <div class="quote-card" role="img" aria-label="Recommended quote for Chicago to Atlanta dry van: sell price 2,450 dollars, expected carrier buy 1,950 to 2,100 dollars, expected margin 350 to 500 dollars, risk high">
+            <div class="qc-head">
+              <div class="qc-lane">
+                <span class="qc-label">Lane</span>
+                <strong>Chicago, IL → Atlanta, GA</strong>
+                <span class="qc-tag">Dry van · Contract · 10/wk</span>
+              </div>
+              <span class="qc-risk qc-risk-high">Risk: High</span>
+            </div>
+            <div class="qc-grid">
+              <div class="qc-cell">
+                <span>Customer sell</span>
+                <strong>$2,450</strong>
+              </div>
+              <div class="qc-cell">
+                <span>Carrier buy</span>
+                <strong>$1,950–$2,100</strong>
+              </div>
+              <div class="qc-cell qc-cell-accent">
+                <span>Expected margin</span>
+                <strong>$350–$500</strong>
+              </div>
+            </div>
+            <div class="qc-why">
+              <span>Why high risk</span>
+              <ul>
+                <li>Carrier cost up <strong>12%</strong> in last 30 days</li>
+                <li>Low outbound capacity</li>
+                <li>Monday pickup</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="section" id="problem">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">The problem</p>
+          <h2>You feel the gap on every quote.</h2>
+          <p class="lede-sub">Truckload brokerage is a spread business. Your profit is the difference between what the shipper pays and what the carrier is paid — and the buy side is the part you can't see clearly.</p>
+        </div>
+
+        <div class="cards-3">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-8"/><path d="M14 7h6v6"/></svg>
+            </div>
+            <h3>Load board averages ≠ real capacity</h3>
+            <p>DAT and Truckstop averages don't always match the trucks actually available on a lane. Pricing off the average means quoting blind to true buy-side risk.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <h3>Quotes come from gut feel</h3>
+            <p>Today's quote is DAT average + experience + phone calls + gut feeling. Institutional knowledge lives in a few reps' heads, not in a system that can protect every quote.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"/></svg>
+            </div>
+            <h3>Margin erodes in the field</h3>
+            <p>Ops covers loads under pressure, and contract freight locks in a rate for weeks. One bad Monday pickup on a tight lane can quietly wipe out the week's margin.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTION / POSITIONING -->
+    <section class="section section-alt" id="solution">
+      <div class="container narrow">
+        <div class="section-head">
+          <p class="eyebrow">What LaneVal is</p>
+          <h2>Not a rate predictor. A margin protector.</h2>
+        </div>
+        <div class="positioning">
+          <p class="positioning-lead">Predicting freight rates is a hard promise no one can keep. LaneVal makes a promise you can keep:</p>
+          <p class="positioning-quote">“<strong>Avoid bad quotes</strong> and <strong>protect margin</strong>.”</p>
+          <p class="positioning-sub">We don't guess the future. We surface the buy-side risk and the spread you'll keep, grounded in the data you already own — before the price leaves your desk.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">How it works</p>
+          <h2>From RFQ to a protected quote in seconds.</h2>
+          <p class="lede-sub">LaneVal reads the request, grounds the number in your history, and hands you a recommendation you can defend — or adjust before you send.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num">1</span>
+            <div>
+              <h3>Extract</h3>
+              <p>Paste the customer's RFQ email. LaneVal extracts the lane, equipment, volume, frequency, and customer — Chicago to Atlanta, dry van, 10 loads/week, contract.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-num">2</span>
+            <div>
+              <h3>Ground the price</h3>
+              <p>LaneVal asks how you're pricing it — existing carrier history, a DAT/Truckstop rate, or a manual estimate — and layers your own booked rates and margin history on top.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-num">3</span>
+            <div>
+              <h3>Recommend & protect</h3>
+              <p>Get a sell price, an expected carrier buy range, an expected margin range, and a risk level with the reasons behind it. Adjust the number or send it with confidence.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="demo" id="demo">
+          <div class="demo-controls">
+            <label for="lane-select">Try a sample lane</label>
+            <select id="lane-select">
+              <option value="0">Chicago → Atlanta · Dry van · Contract</option>
+              <option value="1">Dallas → Chicago · Reefer · Spot</option>
+              <option value="2">Phoenix → Denver · Flatbed · Spot</option>
+              <option value="3">Fresno → New York · Produce · Contract</option>
+            </select>
+            <span class="demo-note">Sample data for illustration</span>
+          </div>
+
+          <div class="quote-card" id="demo-card" aria-live="polite">
+            <div class="qc-head">
+              <div class="qc-lane">
+                <span class="qc-label">Lane</span>
+                <strong id="demo-lane">Chicago, IL → Atlanta, GA</strong>
+                <span class="qc-tag" id="demo-tag">Dry van · Contract · 10/wk</span>
+              </div>
+              <span class="qc-risk" id="demo-risk">Risk: High</span>
+            </div>
+            <div class="qc-grid">
+              <div class="qc-cell"><span>Customer sell</span><strong id="demo-sell">$2,450</strong></div>
+              <div class="qc-cell"><span>Carrier buy</span><strong id="demo-buy">$1,950–$2,100</strong></div>
+              <div class="qc-cell qc-cell-accent"><span>Expected margin</span><strong id="demo-margin">$350–$500</strong></div>
+            </div>
+            <div class="qc-why">
+              <span>Why this risk</span>
+              <ul id="demo-why">
+                <li>Carrier cost up <strong>12%</strong> in last 30 days</li>
+                <li>Low outbound capacity</li>
+                <li>Monday pickup</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="section section-alt" id="benefits">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Why try LaneVal</p>
+          <h2>Protect your margin from the first quote.</h2>
+          <p class="lede-sub">You already have the data LaneVal needs — historical quotes and booked carrier rates. Start with what you own and see value on day one.</p>
+        </div>
+
+        <div class="cards-3">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+            </div>
+            <h3>Quote in seconds</h3>
+            <p>Paste an RFQ and LaneVal extracts the lane, equipment, and volume, then returns a sell price, buy range, expected margin, and risk level — before you pick up the phone.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/></svg>
+            </div>
+            <h3>Catch bad quotes before you send</h3>
+            <p>See the buy-side risk and the margin you'd actually keep, so an underpriced lane doesn't slip out the door.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-6"/><path d="M2 20h20"/></svg>
+            </div>
+            <h3>Sharpen every quote you make</h3>
+            <p>Every quote folds back into your own booked-carrier and margin history, so recommendations get more accurate the more you use it.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO IT'S FOR -->
+    <section class="section" id="who-its-for">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Who it's for</p>
+          <h2>Built for the independent truckload broker.</h2>
+        </div>
+
+        <div class="icp-grid">
+          <div class="icp-list">
+            <h3>Your profile</h3>
+            <ul class="checklist">
+              <li>Independent, asset-light truckload brokerage</li>
+              <li>5–100 employees</li>
+              <li>10–500 loads per month</li>
+              <li>Runs a TMS + DAT/Truckstop + spreadsheets</li>
+              <li>Salespeople quoting customers daily</li>
+              <li>Operations people covering loads</li>
+            </ul>
+          </div>
+          <div class="icp-list">
+            <h3>Where you fit</h3>
+            <ul class="checklist">
+              <li>Regional freight brokerage</li>
+              <li>Produce broker</li>
+              <li>Dry van broker</li>
+              <li>Reefer broker</li>
+              <li>Flatbed broker</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY TRUCKLOAD -->
+    <section class="section section-alt" id="why-truckload">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Why truckload first</p>
+          <h2>Truckload is where the pain is sharpest.</h2>
+          <p class="lede-sub">Carrier costs are highly variable, spot quoting is constant, and margin pressure is relentless. That's why LaneVal starts here.</p>
+        </div>
+
+        <div class="cards-3">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-8"/><path d="M14 7h6v6"/></svg>
+            </div>
+            <h3>Variable carrier costs</h3>
+            <p>Spot buy rates swing by lane, day, and season. Without your own booked-carrier history in the loop, every quote is a guess at what capacity will actually cost.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <h3>Constant spot quoting</h3>
+            <p>Truckload is priced RFQ-by-RFQ, dozens of times a day. That's a lot of fast decisions — and a lot of chances for margin to leak through the buy side.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"/></svg>
+            </div>
+            <h3>Relentless margin pressure</h3>
+            <p>Dry van, reefer, flatbed, and produce moves carry thin spreads. One underpriced lane can erase the profit on the next ten loads.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container narrow">
+        <div class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2>Common questions.</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>What does LaneVal do?</summary>
+            <p>LaneVal is a margin assistant for truckload freight brokers. It reads an incoming RFQ, extracts the lane, equipment, and volume, and recommends a customer sell price, an expected carrier buy range, an expected margin, and a risk level with reasons — so you can avoid bad quotes and protect margin.</p>
+          </details>
+          <details>
+            <summary>Does LaneVal predict freight rates?</summary>
+            <p>No. LaneVal doesn't claim to predict freight rates. It helps you avoid bad quotes and protect margin by surfacing buy-side risk and the expected spread before a price is sent, grounded in your own quoting and booked-carrier history.</p>
+          </details>
+          <details>
+            <summary>What data do I need to get started?</summary>
+            <p>Start with the data you already own: historical quotes, booked carrier rates, failed quotes, and margin history — your own loads with origin, destination, equipment, customer rate, carrier cost, margin, carrier, and date. No large external dataset is required to begin.</p>
+          </details>
+          <details>
+            <summary>Does LaneVal integrate with my TMS, DAT, or Truckstop?</summary>
+            <p>LaneVal reads your historical loads and ingests TMS exports to get you started, then layers in DAT and Truckstop rate context, fuel prices, weather, and seasonality to sharpen the buy-side range.</p>
+          </details>
+          <details>
+            <summary>How is LaneVal different from load board rate averages?</summary>
+            <p>Load board averages don't always match the capacity actually available on a lane. LaneVal layers your own booked-carrier rates and margin history on top, so the recommendation reflects what you actually pay and win — not a national average.</p>
+          </details>
+          <details>
+            <summary>What freight modes does LaneVal support today?</summary>
+            <p>LaneVal supports truckload today — dry van, reefer, flatbed, and produce.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / EARLY ACCESS -->
+    <section class="section cta-section" id="early-access">
+      <div class="container narrow">
+        <div class="cta-card">
+          <p class="eyebrow">Early access</p>
+          <h2>Protect your margin on the next quote.</h2>
+          <p>We're onboarding a small group of independent truckload brokers. Tell us about your book and we'll get you set up.</p>
+
+          <form id="access-form" class="access-form">
+            <label class="field">
+              <span>Work email</span>
+              <input type="email" name="email" placeholder="you@brokerage.com" required />
+            </label>
+            <label class="field">
+              <span>Company</span>
+              <input type="text" name="company" placeholder="Acme Freight LLC" />
+            </label>
+            <label class="field">
+              <span>Loads per month</span>
+              <select name="volume">
+                <option>10–50</option>
+                <option>50–150</option>
+                <option>150–300</option>
+                <option>300–500</option>
+                <option>500+</option>
+              </select>
+            </label>
+            <button type="submit" class="btn btn-primary btn-lg">Request access</button>
+            <p class="form-note">Or email us directly at <a href="mailto:hello@laneval.io">hello@laneval.io</a>.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="28" height="28" rx="8" fill="url(#lgb)"/><path d="M9 20.5V12l5 5 4-4 5 5" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23" cy="21" r="2.2" fill="#fff"/><defs><linearGradient id="lgb" x1="2" y1="2" x2="30" y2="30"><stop stop-color="#4F46E5"/><stop offset="1" stop-color="#06B6D4"/></linearGradient></defs></svg>
+          </span>
+          <span class="brand-name">LaneVal</span>
+        </a>
+        <p>Margin assistant for truckload freight brokers.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#how-it-works">How it works</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#who-its-for">Who it's for</a>
+        <a href="#faq">FAQ</a>
+        <a href="#early-access">Early access</a>
+      </nav>
+      <div class="footer-meta">
+        <p>© <span id="year">2026</span> LaneVal. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
