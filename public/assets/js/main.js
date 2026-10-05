@@ -83,23 +83,6 @@
     });
   }
 
-  // Early-access form → compose email (no backend required)
-  const form = document.getElementById("access-form");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const data = new FormData(form);
-      const email = data.get("email");
-      const company = data.get("company") || "";
-      const volume = data.get("volume") || "";
-      const subject = encodeURIComponent("LaneVal early access request");
-      const body = encodeURIComponent(
-        "Work email: " + email + "\nCompany: " + company + "\nLoads/month: " + volume + "\n\nTell us about your book:"
-      );
-      window.location.href = "mailto:hello@laneval.io?subject=" + subject + "&body=" + body;
-    });
-  }
-
   // Reveal on scroll
   const revealables = document.querySelectorAll(
     ".card, .step, .icp-list, .faq details, .quote-card"

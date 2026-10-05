@@ -46,11 +46,10 @@ The Worker exposes a minimal API to build on:
 | Method | Path | Description |
 | --- | --- | --- |
 | `GET` | `/api/health` | Liveness check — returns `{ ok, service, time }`. |
-| `POST` | `/api/early-access` | Early-access form submission (scaffold only — logs the JSON body and returns `202`; no storage yet). |
 
 Add new routes in `src/index.ts` on the `app` instance (e.g. `app.get("/api/foo", (c) => c.json({ ... }))`). Bindings (D1, KV, R2, queues, …) go in `wrangler.jsonc` and are typed via `npm run cf-typegen`.
 
-> The on-page early-access form currently composes a `mailto:` and is not yet wired to `/api/early-access`. To switch it over, replace the `mailto` handler in `public/assets/js/main.js` with a `fetch("/api/early-access", { method: "POST", ... })` call — then add a storage binding to actually persist submissions.
+> The site's call-to-action links straight to the app at `https://app.laneval.com/?mode=signup` — there is no on-page waitlist form.
 
 ## Build & type-check
 
@@ -77,12 +76,14 @@ npm run cf-typegen # generate worker-configuration.d.ts from wrangler.jsonc bind
 2. Dashboard → **Workers & Pages → laneval → Settings → Domains & Routes → Add → Custom Domain** → enter `laneval.com` (and `www.laneval.com` if desired). Cloudflare creates the DNS records and SSL cert automatically.
 3. The Worker redirects `www.laneval.com` → `laneval.com` (apex is canonical) via a 301 in `src/index.ts`.
 
-To auto-deploy on every push to `main`, connect the repo in the Cloudflare dashboard (**Workers & Pages → Create → Workers → Connect to Git**) using build command `npm run build` (optional) and no separate output directory — `wrangler` handles the deploy.
+Deployment is **manual** (there is no GitHub Actions workflow or Git-based auto-deploy in this repo): commit your changes, then run `npm run deploy` locally.
+
+> If a Cloudflare **Workers Builds / Connect to Git** integration was previously set up (auto-deploy on push to `main`), disconnect it in the Cloudflare dashboard under **Workers & Pages → `laneval` → Settings → Builds** so pushes no longer trigger a deploy.
 
 ## Before you launch — customize these
 
 - **Domain / canonical URL:** the canonical, Open Graph, `robots.txt`, `sitemap.xml`, and `llms.txt` URLs now point to `https://laneval.com/`. If you change the domain, update `public/index.html`, `public/robots.txt`, `public/sitemap.xml`, `public/llms.txt`, and the www-redirect in `src/index.ts`.
-- **Contact email:** `hello@laneval.io` appears in the CTA and the early-access form.
+- **Contact email:** `hello@laneval.io` appears in the get-started CTA section.
 - **OG image:** `public/assets/og-image.svg` is an SVG. For full social-preview support (LinkedIn/Facebook/X render SVGs inconsistently), replace it with a **1200×630 PNG** and update the `og:image` / `twitter:image` tags.
 - **Favicon:** `public/assets/favicon.svg` is already wired up.
 

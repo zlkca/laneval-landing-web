@@ -37,14 +37,6 @@ app.get("/api/health", (c) =>
   c.json({ ok: true, service: "laneval", time: new Date().toISOString() }),
 );
 
-// Early-access form endpoint (scaffold only — the page still uses mailto for now).
-// TODO: persist the submission to D1/KV or forward it to an email service.
-app.post("/api/early-access", async (c) => {
-  const body = await c.req.json().catch(() => null);
-  console.log("early-access request:", body);
-  return c.json({ ok: true, message: "Thanks — we will be in touch." }, 202);
-});
-
 // Static assets (served from ./public via the ASSETS binding)
 app.all("*", async (c) => {
   const res = await c.env.ASSETS.fetch(c.req.raw);
